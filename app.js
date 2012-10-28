@@ -8,7 +8,7 @@ app.configure(function () {
 
 app.post('*', function(req, res) {
 	console.log(req.body);
-	io.sockets.in(req.url).emit('notifications', 'llalalalalalalla');
+	io.sockets.in(req.url).emit('notifications', req.body);
 	res.send(200);
 });
 
@@ -26,12 +26,12 @@ app.get('*', function(req, res) {
 		<link rel="stylesheet" href="/jgrowl/jquery.jgrowl.css" type="text/css" /> \
 		<script type="text/javascript" src="/jgrowl/jquery.jgrowl.js"></script> \
 		<script type="text/javascript"> \
-		var socket = io.connect("http://localhost"); \
+		var socket = io.connect("http://limitless-hollows-6411.herokuapp.com/"); \
 		socket.on("connect", function() { \
 		socket.emit("join", "'+req.url+'"); \
 		}); \
 		socket.on("notifications",function(data) { \
-		alert(JSON.stringify(data)); \
+		$.jGrowl(JSON.stringify(data)); \
 		}); \
 		</script> \
 		<style type="text/css"> \
