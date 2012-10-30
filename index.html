@@ -12,7 +12,7 @@
   });
   socket.on("notifications",function(data) {
   	$.jGrowl(JSON.stringify(data));
-  	$('mylist').insert('<li>'+data+'</li>');
+  	$('mylist').append('<li>'+data+'</li>');
   });
 </script>
 <style type="text/css">
