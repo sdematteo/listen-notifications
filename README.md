@@ -1,10 +1,10 @@
-Notifications
 
 ## Listen MercadoLibre/MercadoLivre notifications
 
 This applications is writen in node.js and it listens MELI (MercadoLibre/MercadoLivre) notifications from 3 different API resources (questions, items, oders).
 
 For further details about notifications, please visit: http://developers.mercadolibre.com/notifications/
+
 
 ## In order to use this example you will need to:
 
@@ -18,5 +18,6 @@ For further details about notifications, please visit: http://developers.mercado
         "app_id": <your_app_id>,
         "scopes":["read","write"]
     }
+
 
 Enjoy!
